@@ -134,6 +134,7 @@ section.main-bg{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;/*EFEITO PARALLAX*/
     text-align: center;
 }
 
@@ -319,6 +320,7 @@ section.cards{
     padding: 1px;
     width: 220px;
     height: 115px;
+    border-radius: 5px;
 }
 
 .card-single h3{
@@ -421,6 +423,7 @@ section.sobre__noticia{
     max-width: 100%;
     float: left;
     width: 50%;
+    border-radius: 5px;
 }
 
 .sobre__noticia__single p{
@@ -448,6 +451,7 @@ section.parallax{
 
 section.parallax h2.chamada-parallax{
     border: 1px solid #44d4c5;
+    border-radius: 5px;
     padding: 2px 58px;
     color: #44d4c5;
     font-size: 18px;
@@ -502,6 +506,10 @@ section.equipe{
     top: 0;
     background-color: black;
     background-size: 100% 100%;/*para preencher o círculo*/
+}
+
+.w50 img{
+    border-radius: 5px;
 }
 
 section.sobre__final{
@@ -600,6 +608,7 @@ section.contato .w100{
     text-align: center;
     margin-top: 3px;
     padding: 3px 1px;
+    border-radius: 4px;
 }
 
 /*
