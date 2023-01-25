@@ -1,0 +1,737 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*Classes Auxiliares - usadas em todo o projeto*/
+.w60{
+    width: 60%;
+    float: left;
+}
+
+.w40{
+    width: 40%;
+    float: left;
+}
+
+.w50{
+    width: 50%;
+    float: left;
+}
+
+.w33{
+    float: left;
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+.center{
+    text-align: center;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.clear{
+    clear: both;
+}
+
+/*Classes meu site*/
+header{
+    padding: 8px 0;/*para não ficar grudado no topo*/
+}
+
+.logo{
+    float: left;/*joga a logo para a esquerda*/
+}
+
+.logo h2{
+    font-weight: normal;/*pois h2 por padrão vem bold, para usar normal, tem que adicionar o tamanho 'regular' no google fonts*/
+    font-size: 23px;
+}
+
+.logo a{
+    color: black;
+    text-decoration: none;
+}
+
+nav.menu-desktop li.selected{
+    font-weight: normal;/*observe que esse nível é mais específico que o nível 'nav.menu-desktop li' abaixo, que tem a propriedade 'font-weight: lighter'*/
+    text-decoration: underline;/*o que estiver selecionado no momento ficará sublinhado*/
+}
+nav.menu-mobile{
+    display: none;
+    float: right;
+}
+
+nav.menu-mobile h2{
+    cursor: pointer;
+}
+
+nav.menu-mobile ul{
+    display: none;
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 50px;/*para que a logomarca apareça*/
+    z-index: 3;/*para ficar por cima de todos elementos*/
+    text-align: center;
+}
+
+nav.menu-mobile li{
+    padding: 2px 0;
+    border-bottom: 1px solid black;
+
+}
+
+nav.menu-mobile li.selected{
+    background: rgb(225, 225, 225);
+}
+
+nav.menu-mobile a{
+    display: block;/*para que toda área do link seja clicável*/
+    color: black;
+    text-decoration: none;
+}
+
+nav.menu-desktop{
+    float: right;/*joga botões menu para a direita*/
+}
+
+nav.menu-desktop ul{
+    position: relative;/*para que botões fiquem alinhados com o centro do logo*/
+    top: 8px;
+}
+
+nav.menu-desktop li{
+    display: inline-block;/*para que botões fiquem lado a lado*/
+    padding: 0 10px;/*botões não fiquem colados um ao outro*/
+    font-weight: lighter;/*para fonte ficar mais fina, tem que baixar com opção ligth no google fonts*/
+}
+
+nav.menu-desktop a{
+    color: black;/*cor do texto dos botões menu*/
+    text-decoration: none;/*retirar sublinhado padrão dos links*/
+}
+
+nav.menu-desktop a:hover{
+    text-decoration: underline;/*quando passar o mouse por cima do link botão fica sublinhado*/
+}
+
+/*-------------Section Main*/
+section.main-bg{
+    position: relative;/*pai da classe .overlay*/
+    width: 100%;
+    padding: 80px 0 120px 0;
+    background-image: url('../imagens/bg1.jpg');
+    /*Configurações para que o bg fique em toda largura e sem repetição centralizado*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+section.main-bg .container{/*somente o container dentro do section.main-bg*/
+    position: relative;/*para usar o z-index*/
+    z-index: 2;/*quanto maior, mais em cima fica*/
+}
+
+.overlay{
+    position: absolute;/*filho da classe .main-bg*/
+    z-index: 1;/*vai ficar embaixo do texto que está no containder da .section.main-bg com z-index:2*/
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+}
+
+section.main-bg h2{
+    color: #52aaa7;
+    font-weight: normal;
+}
+
+section.main-bg p{
+    text-align: left;
+    color: white;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/*-----------Section diferenciais*/
+section.diferenciais{
+    padding: 10px 0;
+    text-align: center;
+}
+
+.line-text{/*texto com linha em cima*/
+    position: relative;/*pai da div dentro dessa classe*/
+    display: inline-block;/*para ocupar apenas a área do texto e não todo o bloco*/
+    margin-top: 10px;
+    color: #52aaa7;
+}
+
+.line-text div{/*essa div faz a linha que fica em cima do texto*/
+    position: absolute;/*filha da classe .line-text*/
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 3px;
+    background: #52aaa7;
+}
+
+.line-text h2{/*Texto 'experiencia do usuário' com linha em cima*/
+    font-weight: normal;
+    font-size: 19px;
+}
+
+.icones-diferenciais{/*icones e textos*/
+    margin-top: 10px;
+}
+
+.box-icone-single{/*icone 'raio' e textos individuais*/
+    float: left;
+    width: 33.3%;/*dividir largura em três partes, ficar uma ao lado da outra*/
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.box-icone-single h2{/*icone 'bolt'*/
+    color: #8a6b62;
+    font-size: 20px;
+}
+
+.box-icone-single p{/*texto em baixo do 'bolt'*/
+    color: #646464;
+    font-weight: lighter;
+    font-size: 14px;
+    text-align: justify;
+}
+
+section.sobre-equipe{
+    padding: 20px 0;
+    background: rgb(224, 224, 224);
+}
+
+section.sobre-equipe .container{
+    display: flex;
+    flex-wrap: wrap;/*para que possa ocupar 100% da largura no responsivo*/
+}
+
+.equipe-container{
+    width: 50%;
+}
+
+.sobre-container{
+    width: 50%;
+}
+
+.sobre-container p{
+    color: black;
+    font-size: 13px;
+    margin-top: 3px;
+    text-align: justify;
+}
+
+.avatar-box{
+    margin-top: 10px;
+}
+
+.img-avatar{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;/*faz efeito redondo*/
+    background-size: 100% 100%;
+}
+
+.descricao-avatar{
+    width: calc(100%-70px);/*faz op matemáticas com px e %*/
+    /*'100%-70px' é o tamanho que quero ocupar menos o tamanho da img*/
+    display: inline-block;/*tem que definir uma width*/
+    /*para que a img avatar fique ao lado da descrição avatar com o display inline-bloc, colocar uma div ao lado da outra no html*/
+    padding: 0 5px;
+    font-size: 13px;
+    margin-top: 3px;
+    text-align: justify;
+}
+
+.descricao-avatar h3{
+    color: rgb(30, 30, 30);
+    font-weight: normal;
+    font-style: italic;
+}
+
+.descricao-avatar p{
+    color: rgb(30, 30, 30);
+    font-weight: light;
+}
+
+section.inscricao{
+    background: #52aaa7;
+    padding: 15px 0;
+}
+
+h2.inscricao-texto{
+    font-weight: normal;/*por padrão o h2 vem como bold*/
+    color: white;
+}
+
+.inscricao-form input[type=text]{
+    width: calc(100% - 80px);/*espaço entro o sinal matemático*/
+    height: 30px;
+    background: white;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.inscricao-form input[type=submitt]{
+    width: 80px;
+    height: 30px;
+    background: #1d6c64;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    color: white;
+    display: inline-block;
+}
+
+section.cards{
+    padding: 30px 0;
+}
+
+.card-single{
+    width: 33.3%;
+    float: left;
+    padding: 10px;
+}
+
+.card-single img{
+    width: 100%;
+    /* border: 5px solid white;outra forma de descolar as img sem usar padding */
+    padding: 1px;
+    width: 220px;
+    height: 115px;
+}
+
+.card-single h3{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.card-single p{
+    margin: 10px 0;
+    font-weight: light;
+    font-size: 12px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #ccc;
+}
+
+footer.footer1{
+    background: #52aaa7;
+    padding: 20px 0px;
+    color: white;
+}
+
+footer.footer1 h2{
+    font-weight: normal;
+    font-size: 16px;
+}
+
+footer.footer1 p{
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+footer.footer1 a{
+    display: block;
+    color: white;
+}
+
+div.group-icons a{
+    display: inline-block;
+    margin: 10px 10px;
+    font-size: 15px;
+}
+
+.w33 p{
+    padding-right: 3px;
+}
+
+footer.footer2{
+    padding: 10px;
+    background: #237a70;
+    color: white;
+    text-align: center;
+}
+
+/*Página Sobre*/
+section.title-page{
+    padding: 20px;
+    width: 100%;
+    min-height: 90px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+section.title-page h2{
+    color: #44d4c5;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+section.title-page p{
+    color: white;
+    font-size: 13px;
+    font-weight: lighter;
+    margin-top: 6px;
+    text-align: justify;
+}
+
+section.title-page .container{
+    position: relative;
+    z-index: 2;
+}
+
+.overlay__title-page{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/*Sobre container da noticia*/
+section.sobre__noticia{
+    padding: 20px 0;
+}
+
+.sobre__noticia__single img{
+    max-width: 100%;
+    float: left;
+    width: 50%;
+}
+
+.sobre__noticia__single p{
+    float: left;
+    width: 50%;
+    text-align: justify;
+    line-height: 23px;
+    margin-bottom: 15px;
+    padding: 10px 6px;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+/*Efeito parallax na página sobre*/
+section.parallax{
+    padding: 15px 0;
+    width: 100%;/*parallax em alguns navegadores tem que ser o width é de 100%*/
+    min-height: 150px;
+    background-image: url('../imagens/bg1.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    background-attachment: fixed;/*EFEITO PARALLAX*/
+    text-align: center;
+}
+
+section.parallax h2.chamada-parallax{
+    border: 1px solid #44d4c5;
+    padding: 2px 58px;
+    color: #44d4c5;
+    font-size: 18px;
+    display: inline-block;
+}
+
+section.parallax p{
+    color: white;
+    margin-top: 10px;
+}
+
+section.equipe{
+    padding: 10px 0;
+}
+
+/*-------Circulo responsivo-----------*/
+.equipe-circles{
+    margin-top:10px;
+    display: flex;
+    flex-wrap: wrap;/*para poder setar um width no responsivo*/
+}
+
+.equipe-circle-single{
+    padding: 10px;
+    text-align: center;
+    width: 33.3%;
+}
+
+.equipe-circle-single h3{
+    margin-top: 15px;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.equipe-circle-single p{
+    font-weight: lighter;
+}
+
+.avatar-single{
+    position: relative;
+    /*altura igual à largura:*/
+    width: 60%;
+    padding-top: 60%;
+    margin: 0 auto;/*para centralizar*/
+}
+.avatar-single-container{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    background-size: 100% 100%;/*para preencher o círculo*/
+}
+
+section.sobre__final{
+    background: rgb(230, 230, 230);
+    border-top: 2px solid rgb(210, 210, 210);
+    padding: 15px 0;
+}
+
+section.sobre__final p{
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: justify;
+}
+
+.card-text{
+    position: relative;/*pai do h3 abaixo*/
+    width: 80%;
+    margin-top: 8px ;
+}
+
+.card-text img{
+    max-width: 100%;/*para manter a responsividade*/
+}
+
+.card-text h3{
+    /*para posicionar o texto por cima da img:*/
+    position: absolute;
+    right: 8px;
+    bottom: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+section.contato{
+    padding: 30px 0;
+    width: 100%;
+    min-height: 200px;
+}
+
+section.contato .w50,
+section.contato .w100{
+    padding: 0 10px;
+}
+
+.formulario form{
+    margin-top: 10px;
+}
+
+.formulario h2{
+    background: #DDDDDD;
+    text-align: center;
+    color: #ACAC9D;
+    font-size: 13px;
+    padding: 5px 0;
+    font-weight: normal;
+    border-left: 3px solid #CCCCCC;
+}
+
+.formulario input[type=text],
+.formulario input[type=email]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #CCC;
+    margin-bottom: 15px;
+    padding-left: 8px;
+}
+
+.formulario textarea{
+    width: 100%;
+    height: 120px;
+    border: 1px solid #CCC;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    resize: vertical;/*caixa de texto só pode ser aumentada para baixo na vertical*/
+}
+
+.tags-form{
+    padding-left: 30px;
+}
+
+.tags-form h2{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.tags-form p{
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.tags-form p.tag-contato{
+    color: white;
+    background: #249B8F;
+    text-align: center;
+    margin-top: 3px;
+    padding: 3px 1px;
+}
+
+/*
+---------RESPONSIVO:---------
+@media (max-width:767px) {
+    >>>de 0px até 767px
+}
+@media (min-width:768px) and (max-width: 992px) {
+    >>>de 768px até 992px
+}
+@media (min-width:992px) {
+    >>>acima de 992px
+}
+*/
+@media screen and (max-width: 500px){
+.tags-form{
+    padding-left:  0px;
+}
+
+.formulario input[type=text],
+.formulario input[type=email]{
+    margin-bottom: 0;
+}
+
+.formulario textarea{
+    margin-bottom: 0;
+}
+
+    .menu-mobile{
+        z-index: 103;
+    }
+
+    nav.menu-mobile{
+        display: block;
+        z-index: 103;
+    }
+
+    nav.menu-desktop{
+        display: none;
+    }
+
+    .card-single{
+        padding: 0;
+        width: 100%;
+        }
+
+    footer.footer1{
+        text-align: center;
+    }
+
+    .card-single{
+        width: 100%;
+    }
+
+    .w50, .w33, .w60, .w40, .w100 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .box-icone-single{/*icones 'bolt' e textos*/
+        width: 100%;/*ocupam largura de 100% da tela*/
+    }
+
+    .equipe-container{
+        width: 100%;
+    }
+
+    .sobre-container{
+        width: 100%;
+        margin-top: 30px
+    }
+
+    
+    .sobre__noticia__single img{
+        width: 100%;
+    }
+    
+    .sobre__noticia__single p{
+        width: 100%;
+    }
+
+    .equipe-circle-single{
+        padding: 7px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-text{
+        width: 100%;
+    }
+}
+
+@media (min-width:501px) and (max-width: 700px){
+    .tags-form{
+        padding-left:  0px;
+    }
+
+    nav.menu-mobile{
+        display: none;
+        z-index: 103;
+    }
+    footer.footer1{
+        text-align: center;
+    }
+
+    .card-single{
+        width: 100%;
+    }
+
+    .w50, .w33, .w60, .w40, .w100{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .box-icone-single{/*icones 'bolt' e textos*/
+        width: 100%;/*ocupam largura de 100% da tela*/
+    }
+
+    .equipe-container{
+        width: 100%;
+    }
+
+    .sobre-container{
+        width: 100%;
+        margin-top: 30px
+    }
+
+    .sobre__noticia__single img{
+        width: 100%;
+    }
+    
+    .sobre__noticia__single p{
+        width: 100%;
+    }
+};
+

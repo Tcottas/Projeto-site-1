@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--adicionado pelo IDE-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+
+    <!--responsivo-->
+    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="keywords" content="palavra-chave, lorem, ipsum"><!--para SEO-->
+    <!-- colocar aqua as meta tags de SEO -->
+    <!-- https://fontawesome.com/icons tem os codigos para usar diretamente no html, veja o script  no final do body do kit font awsome -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Projeto Web Design Express</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html"><h2>Logomarca-site</h2></a></div>
+            <nav class="menu-desktop">
+                <ul>
+                    <li class="selected"><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <nav class="menu-mobile">
+                <h2><i class="fa fa-bars"></i></h2>
+                <ul>
+                    <li class="selected"><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav><!--menu-mobile-->
+            <div class="clear"></div><!--pois vamos flutuar menu desktop para direita e deixar logo à esquerda-->
+
+        </div><!--container-->
+    </header>
+    <section class="main-bg">
+        
+        <div class="overlay"></div><!--capa de opacidade para a img de bg-->
+        <div class="container">
+            <h2>Web Design Express</h2>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet nulla quis velit tincidunt laoreet non id risus. Cras consequat fringilla est, ut vehicula quam vestibulum eu. Phasellus euismod accumsan magna, a rhoncus libero consectetur hendrerit. Morbi pharetra felis diam. Maecenas vulputate condimentum semper. Sed sed sagittis sem. Nam eros quam, iaculis eget metus a, placerat tincidunt dolor. Donec et erat id felis commodo venenatis. Integer consequat pretium eleifend. Cras et fringilla leo. Vivamus a dolor ut nisl tincidunt vulputate ac at enim. Phasellus eget ligula tristique, interdum nisl quis, venenatis nulla.</p>
+
+            <p>Suspendisse potenti. Morbi eu elit placerat, luctus dolor accumsan, fermentum odio. Proin mollis sagittis tortor, eget pulvinar lectus iaculis vitae. Nam ut malesuada odio. Cras ultrices neque non libero facilisis porttitor. In in felis vestibulum, bibendum sem in, accumsan metus. Duis id erat venenatis, tempus neque in, porta diam. Aenean dapibus leo quis urna vestibulum, sed lacinia magna vehicula. Sed nunc mi, elementum in egestas ut, hendrerit ac libero.</p>
+    </div>
+    </section>
+
+    <section class="diferenciais">
+        <div class="container">
+            <div class="line-text">
+                <div></div><!--essa div cega será a linha em cima do texto-->
+                <h2>Experência do usuário</h2>
+            </div>
+
+            <div class="icones-diferenciais">
+                <div class="box-icone-single">
+                    <h2><i class="fa-solid fa-bolt"></i></h2><!--icone do font awsome-->
+                    <p>Cras et fringilla leo. Vivamus a dolor ut nisl tincidunt vulputate ac at enim. Phasellus eget ligula tristique, interdum nisl quis, venenatis nulla.</p>
+                </div><!--box-icone-single-->
+                <div class="box-icone-single">
+                    <h2><i class="fa-solid fa-bolt"></i></h2><!--icone do font awsome-->
+                    <p>Cras et fringilla leo. Vivamus a dolor ut nisl tincidunt vulputate ac at enim. Phasellus eget ligula tristique, interdum nisl quis, venenatis nulla.</p>
+                </div><!--box-icone-single-->
+                <div class="box-icone-single">
+                    <h2><i class="fa-solid fa-bolt"></i></h2><!--icone do font awsome-->
+                    <p>Cras et fringilla leo. Vivamus a dolor ut nisl tincidunt vulputate ac at enim. Phasellus eget ligula tristique, interdum nisl quis, venenatis nulla.</p>
+                </div><!--box-icone-single-->
+                <div class="clear"></div><!--sempre que usa o float (para não ter erro ao calcular altura)-->
+            </div><!--icones diferenciais-->
+
+        </div>
+    </section>
+
+    <section class="sobre-equipe">
+        <div class="container">
+
+            <div class="equipe-container">
+                <div class="line-text">
+                    <div style="width: 30px; height: 2px;"></div>
+                    <h2>Equipe</h2>
+                </div>
+
+                <div class="avatar-box">
+                    <div class="img-avatar" style="background-image: url('imagens/Perfil1.png');" class="img-avatar"></div><div class="descricao-avatar"><!--divs lado a lado para que img avatar fique ao lado da descricao avatar-->
+                        <h3>Thiago Cotta</h3>
+                        <p>Programador, fotógrafo, administrador.</p>
+                    </div><!--descricao-avatar-->
+                </div><!--avatar-box-->
+
+                <div class="avatar-box">
+                    <div class="img-avatar" style="background-image: url('imagens/jacque-perfil.jpg');" class="img-avatar"></div><div class="descricao-avatar"><!--divs lado a lado para que img avatar fique ao lado da descricao avatar-->
+                        <h3>Jacque Cotta</h3>
+                        <p>Fotógrafa, publicitária e empreendedora.</p>
+                    </div><!--descricao-avatar-->
+                </div><!--avatar-box-->
+
+                <div class="avatar-box">
+                    <div class="img-avatar" style="background-image: url('imagens/meg1.jpg');" class="img-avatar"></div><div class="descricao-avatar"><!--divs lado a lado para que img avatar fique ao lado da descricao avatar-->
+                        <h3>Meg Cotta</h3>
+                        <p>Doguinha profissional em pegar bolinhas no ar.</p>
+                    </div><!--descricao-avatar-->
+                </div><!--avatar-box-->
+                
+            </div><!--equipe-container-->
+
+            <div class="sobre-container">
+                <div class="line-text">
+                    <div style="width: 30px; height: 2px;"></div>
+                    <h2>Sobre</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet nulla quis velit tincidunt laoreet non id risus. Cras consequat fringilla est, ut vehicula quam vestibulum eu. Phasellus euismod accumsan magna, a rhoncus libero consectetur hendrerit.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet nulla quis velit tincidunt laoreet non id risus.</p>
+                </div>
+            </div><!--sobre-container-->
+
+        </div><!--container-->
+    </section><!--sobre-equipe-->
+
+    <section class="inscricao">
+        <div class="container">
+            <div class="w50 center">
+                <h2 class="inscricao-texto"><i class="fa-solid fa-rss"></i> Inscreva-se na nossa lista</h2>
+            </div>
+            <div class="w50 center">
+                <form class="inscricao-form">
+                    <input type="text"><input type="submitt" name="acao" value="Enviar">
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section><!--inscricao-->
+
+    <section class="cards">
+        <div class="container">
+            <div class="card-single">
+                <img src="imagens/img1.jpg" alt="">
+                <h3>Lorem impsum</h3>
+                <p>Tempor ipsum do nostrud consequat id consectetur do esse duis cupidatat.</p>
+            </div>
+            <div class="card-single">
+                <img src="imagens/img2.jpg" alt="">
+                <h3>Lorem impsum</h3>
+                <p>Tempor ipsum do nostrud consequat id consectetur do esse duis cupidatat.</p>
+            </div>
+            <div class="card-single">
+                <img src="imagens/img3.jpg" alt="">
+                <h3>Lorem impsum</h3>
+                <p>Tempor ipsum do nostrud consequat id consectetur do esse duis cupidatat.</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+
+    <footer class="footer1">
+        <div class="container">
+            <div class="w33">
+                <h2>Aonde estamos</h2>
+                <p><i class="fa-solid fa-location-dot" style="padding-right: 8px;"></i>Rua Floriano, Casa da Meguinha</p>
+                <p><i class="fa-solid fa-phone" style="padding-right: 8px;"></i>(32)99934-9087</p>
+            </div>
+            <div class="w33">
+                <h2>Links úteis</h2>
+                <a href="https://www.jacquelinebarletta.com.br/">Jacqueline Barletta</a>
+            </div>
+            <div class="w33">
+                <h2>Conecte-se conosco</h2>
+                <div class="group-icons">
+                    <a href="https://www.facebook.com/jacquelinebarlettajf" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/jbcasamentofoto/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+
+    <footer class="footer2">
+        <div class="container">
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+<script src="https://kit.fontawesome.com/e7bc86cff2.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+    $('nav.menu-mobile h2').click(function(){
+        $('nav.menu-mobile ul').slideToggle();
+    });
+</script>
+</body>    
+</html>
